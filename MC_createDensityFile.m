@@ -104,3 +104,4 @@ fprintf('Total number of Voxels: %d \n', phantom.numbVoxel);
 
             
 fclose(fileID);
+end

@@ -1,4 +1,4 @@
-function MC_createImrtsourcefromDicomRP(NAMEdicom, NAMEspectrum, NAMEoutput) 
+function LEAFdefinedRectangle = MC_createImrtsourcefromDicomRP(NAMEdicom, NAMEspectrum, NAMEoutput) 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % create of input file for egsnrc IMRT-Source
 % call MC_createImrtsourcefromDicomRP(NAMEdicom, NAMEspectrum, NAMEoutput) 
@@ -73,7 +73,7 @@ for i=1:1:numberBEAMS
             
             % recalculation of angle to egsnrc rotation!
             EGSrotation.X(i) = 90*(2*pi/360);               % always 90°
-            EGSrotation.Y(i) = beam.Angle(i)*(2*pi/360);    % depends on beam.Angle
+            EGSrotation.Y(i) = (360-beam.Angle(i))*(2*pi/360);    % depends on beam.Angle
             EGSrotation.Z(i) = 180*(2*pi/360);              % always 180°
 
             % get number of segments for each beam found in Tag (300A,0110): Number of control points
@@ -135,7 +135,8 @@ for i=1:1:numberBEAMS
                                                                             if LEAFdefinedRectangle.LEAFY1(CTRsegments_out, m) ~=  LEAFdefinedRectangle.LEAFY2(CTRsegments_out, m)
                                                                                 format_of_seq = '\t\t\t\t\t :start shape:\n\t\t\t\t\t\t library = egs_rectangle\n\t\t\t\t\t\t rectangle = %1.6f %1.6f %1.6f %1.6f \n\t\t\t\t\t :stop shape:\n';
                                                                                 % top left corner and buttom right corner
-                                                                                fprintf(fileID, format_of_seq, LEAFdefinedRectangle.LEAFY1(CTRsegments_out, m), LEAFdefinedRectangle.LEAFX2(CTRsegments_out, m), LEAFdefinedRectangle.LEAFY2(CTRsegments_out, m),LEAFdefinedRectangle.LEAFX1(CTRsegments_out, m));
+                                                                                %fprintf(fileID, format_of_seq, LEAFdefinedRectangle.LEAFY1(CTRsegments_out, m), LEAFdefinedRectangle.LEAFX2(CTRsegments_out, m), LEAFdefinedRectangle.LEAFY2(CTRsegments_out, m),LEAFdefinedRectangle.LEAFX1(CTRsegments_out, m));
+                                                                                fprintf(fileID, format_of_seq, -LEAFdefinedRectangle.LEAFY2(CTRsegments_out, m), LEAFdefinedRectangle.LEAFX2(CTRsegments_out, m), -LEAFdefinedRectangle.LEAFY1(CTRsegments_out, m),LEAFdefinedRectangle.LEAFX1(CTRsegments_out, m));
                                                                                 STRbeamRectangleProbability = strcat(STRbeamRectangleProbability, probability); 
                                                                             end;
 
@@ -189,3 +190,4 @@ fprintf('IMRT Source file: %s was created! \n\n',OUTPUTfilename);
 
 
 fclose(fileID);
+end

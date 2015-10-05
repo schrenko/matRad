@@ -686,14 +686,13 @@ if handles.State >2 &&  get(handles.popupTypeOfPlot,'Value')== 1
         if ~isempty(mVolume)&& ~isvector(mVolume)
 
             dose_rgb = mVolume./max(mVolume(:));
-
             % Save RGB indices for dose in zslice´s voxels.
             if plane == 1  % Coronal plane
                  mSlice = squeeze(mVolume(slice,:,:));
                 dose_rgb = ind2rgb(uint8(63*squeeze(dose_rgb(slice,:,:))),jet);
             elseif plane == 2 % sagittal plane
                  mSlice = squeeze(mVolume(:,slice,:));
-                dose_rgb = ind2rgb(uint8(63*squeeze(dose_rgb(:,slice,:))),jet);
+                 dose_rgb = ind2rgb(uint8(63*squeeze(dose_rgb(:,slice,:))),jet);
             elseif plane == 3 % Axial plane
                  mSlice = squeeze(mVolume(:,:,slice));
                 dose_rgb = ind2rgb(uint8(63*squeeze(dose_rgb(:,:,slice))),jet);

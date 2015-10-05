@@ -1,4 +1,4 @@
-function [isoCenterV,isoCenter]  = matRad_getIsoCenterforegsnrc(cst,ct,visBool)
+function [isoCenterV,isoCenter]  = MC_getIsoCenter(cst,ct,visBool)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % computes the isocenter [mm] as the joint center of gravity of all volumes
 % of interest that are labeled as target within the cst struct
@@ -90,4 +90,5 @@ if visBool
     ylabel('x [mm]')
     zlabel('z [mm]')
     
+end
 end

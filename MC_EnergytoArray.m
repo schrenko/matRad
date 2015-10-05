@@ -147,5 +147,5 @@ if (round(MC3ddose.resolution(1)) == round(CT.resolution(1)/10))&(round(MC3ddose
           end 
             
 fclose(binFile);
-
+end
 

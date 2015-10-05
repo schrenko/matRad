@@ -1,4 +1,4 @@
-function matRad_calcDVH(result,cst,lineStyleIndicator)
+function [DVH]=matRad_calcDVH(result,cst,lineStyleIndicator)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % matRad dvh calculation
 % 
@@ -71,7 +71,7 @@ end
 dvh       = NaN * ones(1,n);
 
 for i = 1:numOfVois
-
+    DVH{i,1}=cst{i,2};
     indices     = cst{i,4};
     numOfVoxels = numel(indices);
     if sum(strcmp(fieldnames(result),'RBEWeightedDose')) > 0
@@ -86,13 +86,15 @@ for i = 1:numOfVois
     for j = 1:n
         dvh(j) = sum(doseInVoi > dvhPoints(j));
     end
-    
     dvh = dvh ./ numOfVoxels * 100;
+    DVH{i,2} = dvh;
 
     plot(dvhPoints,dvh,'LineWidth',4,'Color',colorMx(i,:), ...
         'LineStyle',lineStyles{lineStyleIndicator},'DisplayName',cst{i,2});
 
 end
+
+DVH{i+1,2} = dvhPoints;
 
 % legend
 legend('show');
