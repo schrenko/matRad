@@ -24,7 +24,9 @@ function [] = MC_createDensityFile(NAMEoutput,DICOMpath, dim, resolution)
         % AIR700ICRU        (50     0)    / (0.044-0.001)
         % LUNG700ICRU       (300    50)   / (0.302-0.044)
         % ICRUTISSUE700ICRU (1125   300)  / (1.101-0.302)
-        % ICRUBONE700ICRU   (1125   3000) / (2.088-1.101)
+%       % ICRUBONE700ICRU   (1125   3000) / (2.088-1.101)
+%        
+% IMPORTANT Note: Only CT.dcm date in DICOMpath allowed! No RS etc.!        
 % Oliver Schrenk
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

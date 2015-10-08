@@ -16,6 +16,8 @@ function [MCdose,MCuct] = MC_EnergytoArray(NAME3ddose,CT,CST,PLAN,scalDOSE,limit
 % Explanation: 
 %     Can be used to indroduce MCsimulation to matRad environment
 %     to fit 3ddose to matRad dicom X and Y Koordinates neet to be swapped!
+% Important:
+%     Needs density file of same name!
 % Oliver Schrenk
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -41,9 +43,9 @@ dicom.voxelISOcenter = MC_getIsoCenter(CST,CT,0);
 %% get values of 3ddose file
 
 % get geometrical position of each 3ddose Voxel
-MC3ddose.Voxelpos.X = fread(binFile,[MC3ddose.X+1],'float32');
-MC3ddose.Voxelpos.Y = fread(binFile,[MC3ddose.Y+1],'float32');
-MC3ddose.Voxelpos.Z = fread(binFile,[MC3ddose.Z+1],'float32');
+MC3ddose.Voxelpos.X = fread(binFile,[MC3ddose.X+1],'float32')+(CT.resolution(1)/20);
+MC3ddose.Voxelpos.Y = fread(binFile,[MC3ddose.Y+1],'float32')+(CT.resolution(2)/20);
+MC3ddose.Voxelpos.Z = fread(binFile,[MC3ddose.Z+1],'float32')+(CT.resolution(3)/20);
 
 
 

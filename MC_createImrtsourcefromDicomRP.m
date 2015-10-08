@@ -102,11 +102,13 @@ for i=1:1:numberBEAMS
                                 LEAFdefinedRectangle.LEAFX2(CTRsegments_in, m)=  fieldsizeLEAFPAIRS(m+1)/10;  
                                 % get Y1 & Y2 coordinate defined by Leaf opening
                                 % found in Tag (300A,011C)
-                                LEAFdefinedRectangle.LEAFY1(CTRsegments_in, m)=  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j*2) '.BeamLimitingDevicePositionSequence.Item_2.LeafJawPositions(m)'])/10;
-                                %LEAFdefinedRectangle.LEAFY1(CTRsegments_in, m)=  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j) '.BeamLimitingDevicePositionSequence.Item_3.LeafJawPositions(m)'])/10;
+                               
+                                %LEAFdefinedRectangle.LEAFY2(CTRsegments_in, m) =  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j*2) '.BeamLimitingDevicePositionSequence.Item_2.LeafJawPositions(m+80)'])/10;
+                                LEAFdefinedRectangle.LEAFY1(CTRsegments_in, m) =  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j) '.BeamLimitingDevicePositionSequence.Item_3.LeafJawPositions(m+80)'])/10;
 
-                                LEAFdefinedRectangle.LEAFY2(CTRsegments_in, m) =  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j*2) '.BeamLimitingDevicePositionSequence.Item_2.LeafJawPositions(m+80)'])/10;
-                               % LEAFdefinedRectangle.LEAFY2(CTRsegments_in, m) =  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j) '.BeamLimitingDevicePositionSequence.Item_3.LeafJawPositions(m+80)'])/10;
+                                
+                                % LEAFdefinedRectangle.LEAFY1(CTRsegments_in, m)=  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j*2) '.BeamLimitingDevicePositionSequence.Item_2.LeafJawPositions(m)'])/10;
+                                LEAFdefinedRectangle.LEAFY2(CTRsegments_in, m)=  eval([ 'metadaten.BeamSequence.Item_' num2str(i) '.ControlPointSequence.Item_' num2str(j) '.BeamLimitingDevicePositionSequence.Item_3.LeafJawPositions(m)'])/10;
 
                             end;
 
@@ -136,7 +138,7 @@ for i=1:1:numberBEAMS
                                                                                 format_of_seq = '\t\t\t\t\t :start shape:\n\t\t\t\t\t\t library = egs_rectangle\n\t\t\t\t\t\t rectangle = %1.6f %1.6f %1.6f %1.6f \n\t\t\t\t\t :stop shape:\n';
                                                                                 % top left corner and buttom right corner
                                                                                 %fprintf(fileID, format_of_seq, LEAFdefinedRectangle.LEAFY1(CTRsegments_out, m), LEAFdefinedRectangle.LEAFX2(CTRsegments_out, m), LEAFdefinedRectangle.LEAFY2(CTRsegments_out, m),LEAFdefinedRectangle.LEAFX1(CTRsegments_out, m));
-                                                                                fprintf(fileID, format_of_seq, -LEAFdefinedRectangle.LEAFY2(CTRsegments_out, m), LEAFdefinedRectangle.LEAFX2(CTRsegments_out, m), -LEAFdefinedRectangle.LEAFY1(CTRsegments_out, m),LEAFdefinedRectangle.LEAFX1(CTRsegments_out, m));
+                                                                                fprintf(fileID, format_of_seq, -LEAFdefinedRectangle.LEAFY1(CTRsegments_out, m), LEAFdefinedRectangle.LEAFX2(CTRsegments_out, m), -LEAFdefinedRectangle.LEAFY2(CTRsegments_out, m),LEAFdefinedRectangle.LEAFX1(CTRsegments_out, m));
                                                                                 STRbeamRectangleProbability = strcat(STRbeamRectangleProbability, probability); 
                                                                             end;
 
