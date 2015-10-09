@@ -1,0 +1,1 @@
+Porc lung phantom. 5 fields. Tumor in Center. 960000 Voxel with size 2.5 x 2.5 x 2.5

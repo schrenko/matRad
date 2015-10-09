@@ -1,0 +1,127 @@
+
+               *************************************************
+               *                                               *
+               *               egs_magnetic                    *
+               *                                               *
+               *************************************************
+
+This is EGS_MagneticApplication Revision: 1.21  based on
+      EGS_AdvancedApplication Revision: 1.36 
+
+
+
+======================== geometry =====================
+ type = EGS_XYZGeometryT
+ name = ct_phantom_iso
+ number of regions = 1170000
+
+
+The simulation uses the following source:
+=========================================
+ Transformed Source collection
+
+
+Random number generator:
+============================================
+  type                = ranmar
+  high resolution     = no
+  initial seeds       = 33 97
+  numbers used so far = 5373336448
+
+
+The following ausgab objects are included in the simulation
+===========================================================
+
+
+*******************************************
+Dose Scoring Object (Schweinelunge_20150617_4D_25_0T_rot_1field_6)
+*******************************************
+
+ - Regions in dose calculator :1170001
+
+ - Medium dose will be calculated
+
+--------------------------------------
+ medium         rho/[g/cm**3]
+--------------------------------------
+AIR521ICRU       0.00
+LUNG521ICRU      0.26
+TISSUE521ICRU    1.00
+ICRPBONE521ICRU  1.85
+
+*******************************************
+
+
+
+
+
+The following media are defined:
+================================
+
+  0  AIR521ICRU               AE= 0.5210 AP= 0.0100 0
+  1  LUNG521ICRU              AE= 0.5210 AP= 0.0100 1
+  2  TISSUE521ICRU            AE= 0.5210 AP= 0.0100 2
+  3  ICRPBONE521ICRU          AE= 0.5210 AP= 0.0100 3
+
+
+Transport parameter and cross section options:
+==============================================
+Photon cross sections                             xcom            
+Compton cross sections                            default         
+Global Pcut                                       0.01
+Pair cross sections                               BH
+Pair angular sampling                             Simple
+Triplet production                                Off
+Bound Compton scattering                          norej
+Radiative Compton corrections                     Off
+Rayleigh scattering                               Off
+Atomic relaxations                                On
+Photoelectron angular sampling                    On
+Photonuclear attenuation                          Off
+Photonuclear cross sections                       default         
+
+Global Ecut                                       0.521
+Brems cross sections                              BH
+Brems angular sampling                            KM
+Spin effects                                      On
+Electron Impact Ionization                        Off             
+Global Smax                                       1e+10
+ESTEPE                                            0.25
+Ximax                                             0.5
+Boundary crossing algorithm                       Exact
+Skin depth for BCA                                3
+Electron-step algorithm                           EGSnrc
+
+                      Suming the following .egsdat files:
+=======================================================================
+ 1 Schweinelunge_20150617_4D_25_0T_rot_1field_6_w1.egsdat ncase=5000000        cpu=1718.40    
+ 2 Schweinelunge_20150617_4D_25_0T_rot_1field_6_w2.egsdat ncase=5000000        cpu=1695.43    
+ 3 Schweinelunge_20150617_4D_25_0T_rot_1field_6_w3.egsdat ncase=5000000        cpu=1699.20    
+ 4 Schweinelunge_20150617_4D_25_0T_rot_1field_6_w4.egsdat ncase=5000000        cpu=1695.41    
+ 5 Schweinelunge_20150617_4D_25_0T_rot_1field_6_w5.egsdat ncase=5000000        cpu=1672.20    
+=======================================================================
+                            Total ncase=25000000       cpu=8480.64    
+
+
+
+Finished simulation
+
+Total cpu time for this run:            18.09 (sec.) 0.0050(hours)
+CPU time including previous runs:       8498.73 (sec.) 2.3608(hours)
+Histories per hour:                     1.05898e+07   
+Number of random numbers used:          26859013903   
+Number of electron CH steps:            1.29502e+09   
+Number of all electron steps:           1.96354e+09   
+
+======================================================
+Dose Scoring Object(Schweinelunge_20150617_4D_25_0T_rot_1field_6)
+======================================================
+=> last case = 25000000 fluence = 2.5e+07
+
+
+
+======================================================
+
+
+End of run                                             Mon Oct  5 11:11:13 2015
+================================================================================

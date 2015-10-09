@@ -1,0 +1,1052 @@
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM1_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM1 
+	 source names =  BEAM1_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM1_ROTATION
+	 source name = BEAM1
+	 :start transformation:
+		 rotation = 1.570796 6.283185 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM2_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM2 
+	 source names =  BEAM2_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM2_ROTATION
+	 source name = BEAM2
+	 :start transformation:
+		 rotation = 1.570796 5.585054 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM3_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM3 
+	 source names =  BEAM3_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM3_ROTATION
+	 source name = BEAM3
+	 :start transformation:
+		 rotation = 1.570796 4.886922 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM4_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM4 
+	 source names =  BEAM4_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM4_ROTATION
+	 source name = BEAM4
+	 :start transformation:
+		 rotation = 1.570796 4.188790 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM5_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM5 
+	 source names =  BEAM5_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM5_ROTATION
+	 source name = BEAM5
+	 :start transformation:
+		 rotation = 1.570796 3.490659 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM6_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM6 
+	 source names =  BEAM6_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM6_ROTATION
+	 source name = BEAM6
+	 :start transformation:
+		 rotation = 1.570796 2.792527 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM7_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM7 
+	 source names =  BEAM7_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM7_ROTATION
+	 source name = BEAM7
+	 :start transformation:
+		 rotation = 1.570796 2.094395 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM8_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM8 
+	 source names =  BEAM8_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM8_ROTATION
+	 source name = BEAM8
+	 :start transformation:
+		 rotation = 1.570796 1.396263 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_collimated_source
+	 name = BEAM9_SEGMENT1
+	 :start source shape:
+		 type = point
+		 position = 0 0 -100
+	 :stop source shape:
+
+			 :start target shape:
+				 library = egs_shape_collection
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.500000 5.000000 -5.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -4.000000 5.000000 -4.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.500000 5.000000 -4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -3.000000 5.000000 -3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.500000 5.000000 -3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -2.000000 5.000000 -2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.500000 5.000000 -2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -1.000000 5.000000 -1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 -0.500000 5.000000 -1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.000000 5.000000 -0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 0.500000 5.000000 0.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.000000 5.000000 0.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 1.500000 5.000000 1.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.000000 5.000000 1.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 2.500000 5.000000 2.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.000000 5.000000 2.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 3.500000 5.000000 3.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.000000 5.000000 3.500000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 4.500000 5.000000 4.000000 
+					 :stop shape:
+					 :start shape:
+						 library = egs_rectangle
+						 rectangle = -5.000000 5.000000 5.000000 4.500000 
+					 :stop shape:
+
+	 probabilities =  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			:stop target shape:
+			 charge = 0
+		 :start spectrum:
+			 type = tabulated spectrum
+			 spectrum file = Artiste_Geant4_8mm_phsp_tacke.spectrum
+		:stop spectrum:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = BEAM9 
+	 source names =  BEAM9_SEGMENT1
+	 weights =  1 
+:stop source:
+
+:start source:
+	 library = egs_transformed_source
+	 name = BEAM9_ROTATION
+	 source name = BEAM9
+	 :start transformation:
+		 rotation = 1.570796 0.698132 3.141593
+	 :stop transformation:
+:stop source:
+
+:start source:
+	 library = egs_source_collection
+	 name = IMRT_source
+	 source names =  BEAM1_ROTATION BEAM2_ROTATION BEAM3_ROTATION BEAM4_ROTATION BEAM5_ROTATION BEAM6_ROTATION BEAM7_ROTATION BEAM8_ROTATION BEAM9_ROTATION
+	 weights =  11.1111 11.1111 11.1111 11.1111 11.1111 11.1111 11.1111 11.1111 11.1111
+:stop source:
+
+	 simulation source = IMRT_source

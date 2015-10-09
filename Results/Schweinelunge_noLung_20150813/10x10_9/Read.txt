@@ -1,0 +1,1 @@
+Porc Lung phanotm no Lung. Phantom size X=165,Y=120,Z=45, Number of Voxels 891000 a 2.5 x 2.5 x 2.5

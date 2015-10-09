@@ -1,0 +1,3 @@
+Porclung phantom Philip (20150219_LungeStatisch_DoseMaxinCenter), 3 beams from 0,120,240 degree, small segment fields of 1x1 cm, voxelgrid (2.5,2.5,2.5)
+
+MC-Simulation: Accuracy of 0.4% in Isocenter, calculation time 0T=16.5h 1.5T= 23.8h (2.5e+8 particles)

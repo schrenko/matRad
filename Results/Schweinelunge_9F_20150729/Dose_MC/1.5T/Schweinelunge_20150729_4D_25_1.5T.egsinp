@@ -1,0 +1,124 @@
+##############################################################################
+#
+#  $Id: test1.egsinp,v 1.3 2005/05/24 13:20:38 iwan Exp $
+#
+#  An example input file for tutor7pp
+#
+##############################################################################
+
+
+######################################## Define the geometry:
+#                                      a 1mm plate of tantalum
+#
+
+:start geometry definition:
+	
+	:start geometry:
+   	       
+	 library = egs_ndgeometry
+    		type = EGS_XYZGeometry
+    		name = ct_phantom
+		
+		density matrix  = Schweinelunge_20150729_4D_25_1.5T.density # must have same name as ausgab object!
+
+	        ct ramp = ramp_file_mod
+
+
+   	:stop geometry:
+
+
+	:start geometry:                             
+		 library = egs_gtransformed
+		 my geometry = ct_phantom
+		 name = ct_phantom_iso  
+			:start transformation:
+			translation = -25.34 -16.65 21.65
+			:stop transformation:
+	:stop geometry:
+
+	
+	
+
+
+
+	  simulation geometry = ct_phantom_iso  
+
+
+
+
+
+:stop geometry definition:
+
+
+
+
+
+######################################## 
+#
+:start source definition:
+
+	include file = Schweinelunge_20150729_4D_25_1.5T.imrtsource
+
+:stop source definition:
+
+
+:start magnetic field:
+    type = 1
+    epsilon1 = 0.025
+    bfield vector = 0 0 1.5
+:stop magnetic field:
+
+
+
+
+
+
+######################################### Transport parameters
+#                                         you can add any other option
+#                                         supported by EGSnrc
+#
+:start MC transport parameter:
+
+    Global ECUT = 0.521
+    Global PCUT = 0.01
+
+:stop MC transport parameter:
+
+
+:start ausgab object definition:
+
+ :start ausgab object:
+    library = egs_imrt_E_scoring
+    name = Schweinelunge_20150729_4D_25_1.5T #must be identical with egsphant 
+    medium dose = yes #optional
+    region dose = yes #per default eh yes
+    volume = 0.015625
+    dose start region = 0
+	     dose stop region = 720000
+
+ :stop ausgab object:
+:stop ausgab object definition:
+
+#:start ausgab object definition:
+
+ #:start ausgab object:
+
+  #     library = egs_track_scoring
+   #    score photons   = yes
+    #   score electrons = yes
+    #   score positrons = yes
+ #:stop ausgab object:
+
+#:stop ausgab object definition:
+
+######################################## Run control
+:start run control:
+    ncase = 4000000000
+    #statistical accuracy sought = 1  # this input is optional
+    #max cpu hours allowed = 48       # this input is optional
+    #calculation = combine   # could als be first or restart or analyze
+  			     # the input is optional and if missing, a 
+                             # fresh calculation will be done
+:stop run control:
+
+

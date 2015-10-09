@@ -1,0 +1,2 @@
+Porc lung Phantom 9 Fields (Schweinelunge_20150729) Dimension of Density File X=150,Y=120,Z=40 (720000 Voxel in Total). Voxel size 2.5 x 2.5 x 2.5
+ 
