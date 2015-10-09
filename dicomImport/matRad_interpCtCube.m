@@ -52,6 +52,7 @@ x = coordsOfFirstPixel(1,1) + origCtInfo(1).PixelSpacing(1)*double([0:origCtInfo
 y = coordsOfFirstPixel(2,1) + origCtInfo(1).PixelSpacing(2)*double([0:origCtInfo(1).Rows-1]');
 z = coordsOfFirstPixel(3,:);
 
+
 xi = coordsOfFirstPixel(1,1):resolution(1):(coordsOfFirstPixel(1,1)+origCtInfo(1).PixelSpacing(1)*double(origCtInfo(1).Rows-1));
 yi = [coordsOfFirstPixel(2,1):resolution(2):(coordsOfFirstPixel(2,1)+origCtInfo(1).PixelSpacing(2)*double(origCtInfo(1).Columns-1))]';
 zi = coordsOfFirstPixel(3,1):resolution(3): coordsOfFirstPixel(3,end);
