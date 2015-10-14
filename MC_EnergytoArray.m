@@ -22,7 +22,7 @@ function [MCdose,MCuct] = MC_EnergytoArray(NAME3ddose,CT,CST,PLAN,scalDOSE,limit
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 filename1 = [NAME3ddose '.3ddose'];
-filename2 = [NAME3ddose '.density'];
+filename2 = 'Schweinelunge_20150610_BIXEL.density'; %[NAME3ddose '.density'];
 
 binFile = fopen(filename2);
 
@@ -38,7 +38,7 @@ MC3ddose.Z = fread(binFile,[1],'int32');
 %Iso =[21.72, 26.79, -42.32];  
 %Iso =[25.04, 17.38, -24.63];  
 %Iso =[24.26, 19.90, -23.99];  
-dicom.voxelISOcenter = MC_getIsoCenter(CST,CT,0);
+%dicom.voxelISOcenter = MC_getIsoCenter(CST,CT,0);
 
 %% get values of 3ddose file
 
