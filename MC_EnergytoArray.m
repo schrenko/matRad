@@ -124,7 +124,7 @@ if (round(MC3ddose.resolution(1)) == round(CT.resolution(1)/10))&(round(MC3ddose
   MC3ddose.DoseISO =  MC3ddose.DoseArray(dicom.voxelISOcenter(2),dicom.voxelISOcenter(1),dicom.voxelISOcenter(3));
   
    if boolscal == 0
-   MC3ddose.DoseArray = MC3ddose.DoseArray * 10^18;%(MC3ddose.DoseArray/MC3ddose.DoseISO)*scalDOSE;
+   MC3ddose.DoseArray = (MC3ddose.DoseArray/MC3ddose.DoseISO)*scalDOSE;
    elseif boolscal == 1
    MC3ddose.DoseArray =(MC3ddose.DoseArray/MC3ddose.MAX)*scalDOSE;
    end

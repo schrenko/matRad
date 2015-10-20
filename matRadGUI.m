@@ -709,7 +709,7 @@ if handles.State >2 &&  get(handles.popupTypeOfPlot,'Value')== 1
                     
                 elseif plane == 2 % sagittal plane
                     if get(handles.radiobtnDose,'Value')
-                        set(doseImageHandle,'AlphaData',  .6*double(squeeze(Result.Dose(:,slice,:))>...
+                        set(doseImageHandle,'AlphaData',  .6*double(squeeze(Result.(handles.SelectedDisplayOption)(:,slice,:))>...
                         CutOffLevel*max(Result.(handles.SelectedDisplayOption)(:)))) ;
                     end
                 elseif plane == 3 % Axial plane
