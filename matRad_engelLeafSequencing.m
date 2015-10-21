@@ -68,9 +68,9 @@ offset = 0;
 for i = 1:numOfBeams
     
     numOfRaysPerBeam = stf(i).numOfRays; 
-    
+   
     % get relevant weights for current beam
-    wOfCurrBeams = resultGUI.w(1+offset:numOfRaysPerBeam+offset);
+    wOfCurrBeams = resultGUI(1+offset:numOfRaysPerBeam+offset);
     
     X = ones(numOfRaysPerBeam,1)*NaN;
     Z = ones(numOfRaysPerBeam,1)*NaN;
